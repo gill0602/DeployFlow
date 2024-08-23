@@ -32,8 +32,8 @@ const ecsClient = new ECSClient({
 })
 
 const config = {
-    CLUSTER: 'arn:aws:ecs:ap-south-1:008971657905:cluster/builder-cluster',
-    TASK: 'arn:aws:ecs:ap-south-1:008971657905:task-definition/builder-task'
+    CLUSTER: '',
+    TASK: ''
 }
 
 app.use(express.json())
@@ -50,9 +50,8 @@ app.post('/project',async (req, res) => {
         networkConfiguration: {
             awsvpcConfiguration: {
                 assignPublicIp: 'ENABLED',
-                subnets: ['subnet-08e12e1a76734e4ce','subnet-0df63e1e5d419e7f6','subnet-0df98215f20d4e557'],
-                securityGroups: ['sg-00c95d2e36b0836c8']
-
+                subnets:[] ,
+                securityGroups: []
             }
         },
         overrides: {
