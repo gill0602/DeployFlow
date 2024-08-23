@@ -25,8 +25,8 @@ io.listen(9001, ()=>console.log('Socket Server 9001'))
 const ecsClient = new ECSClient({
     region:'ap-south-1',
     credentials:{
-        accessKeyId: 'AKIAQEFWAUKYROWISYEA',
-        secretAccessKey:'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',
+        accessKeyId: '',
+        secretAccessKey:'',
         tls : {},
     }
 })
